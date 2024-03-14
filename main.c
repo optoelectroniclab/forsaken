@@ -28,7 +28,7 @@
 //
 
 bool Debug = true;
-bool ShowFrameRate = false;
+bool ShowFrameRate = true;
 bool ShowInfo = false;
 
 int cliSleep = 0;
