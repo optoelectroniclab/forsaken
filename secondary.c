@@ -1136,6 +1136,7 @@ static int16_t	OnceOnlyFlag = 0;
 							Pos.x = ( DropVector.x * ( 75.0F * GLOBAL_SCALE ) );
 							Pos.y = ( DropVector.y * ( 75.0F * GLOBAL_SCALE ) );
 							Pos.z = ( DropVector.z * ( 75.0F * GLOBAL_SCALE ) );
+							DebugPrintf( "Mug fired at %f,%f,%f\n", Pos.x,Pos.y,Pos.z);
 							InitOneSecBull( OWNER_SHIP, WhoIAm, ++Ships[ WhoIAm ].SecBullIdCount,
 											Ships[WhoIAm].Object.Group, &Ships[ WhoIAm ].Object.Pos,
 											&Pos, &Dir, &UpVector, &DropVector, Ships[ WhoIAm ].Secondary, false );
@@ -1587,6 +1588,7 @@ u_int16_t	InitOneSecBull( u_int16_t OwnerType, u_int16_t Owner, u_int16_t Bullet
 		SecBulls[i].Pos.z = ( Pos->z + Offset->z );
 		SecBulls[i].Offset = *Offset;
 		SecBulls[i].StartPos = SecBulls[i].Pos;
+		DebugPrintf( "Sec fired at %f,%f,%f\n", SecBulls[i].Pos.x,SecBulls[i].Pos.y,SecBulls[i].Pos.z);
 		SecBulls[i].StartDir = SecBulls[i].DirVector;
 		SecBulls[i].StartMat = SecBulls[i].Mat;
 		SecBulls[i].OwnerType = OwnerType;
