@@ -3742,9 +3742,9 @@ bool RenderScene( void )
 	//      StartCountDown( (int16_t) TimeLimit.value, 0 );
 	//    }
     
-#ifdef DEMO_SUPPORT
-    QueryPerformanceCounter((LARGE_INTEGER *) &GameStartedTime);
-#endif
+    #ifdef DEMO_SUPPORT
+        QueryPerformanceCounter((LARGE_INTEGER *) &GameStartedTime);
+    #endif
 
     MyGameStatus = STATUS_SinglePlayer;
     GameStatus[WhoIAm] = MyGameStatus;
